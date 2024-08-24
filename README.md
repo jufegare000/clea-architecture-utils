@@ -71,7 +71,7 @@ Each layer in this application is separated into three main modules: _Infrastruc
 If you are not familiar with this approach, I invite you to explore the project and share any questions or concerns you have about my design decisions. I will do my best to provide examples and explanations to help you understand.
 # **Implemented Modules**
 1. SpringBoot Application: You can find the Spring Configuration in the root package of the underlying directory `infrastructure/src/main/java/com/clean_architecture_utils/spring`
-    2. RestController: This is an basic implementation, you can found in the infrastructure directory.
+2. RestController: This is an basic implementation, you can found in the infrastructure directory.
 
 # **How to run applications?**
 1. SpringBoot Application:
