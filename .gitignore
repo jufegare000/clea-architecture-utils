@@ -5,3 +5,4 @@ gradlew
 ./gradle
 gradle/*
 .obsidian
+./infrastructure/build/*
