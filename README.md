@@ -1,7 +1,5 @@
 # clea-architecture-utils
 ==================================
-
-```
 # **Introduction**
 This is a guided Java architecture sample that provides a reference for implementing a clean architecture in a Java application. You can replicate this approach in various projects without being concerned about specific frameworks, business logic, or concrete project requirements. This sample includes examples of a **REST Controller**, a Kafka Consumer and producer, AWS Lambda function implementations, and Spring Boot application environments.
 
