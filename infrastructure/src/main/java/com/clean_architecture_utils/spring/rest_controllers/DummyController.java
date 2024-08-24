@@ -1,4 +1,4 @@
-package com.clean_architecture_utils.rest_controllers;
+package com.clean_architecture_utils.spring.rest_controllers;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
