@@ -2,10 +2,18 @@ plugins {
     id 'java'
 }
 
-dependencies {
-    implementation project(':domain')
-    implementation project(':application')
+group = 'com.clean_architecture_utils'
+version = 'unspecified'
+
+repositories {
+    mavenCentral()
 }
 
-sourceCompatibility = '21'
-targetCompatibility = '21'
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}

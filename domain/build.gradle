@@ -2,9 +2,18 @@ plugins {
     id 'java'
 }
 
-dependencies {
-    // Este módulo no debería tener dependencias externas, sólo en pruebas si es necesario
+group = 'com.clean_architecture_utils'
+version = 'unspecified'
+
+repositories {
+    mavenCentral()
 }
 
-sourceCompatibility = '21'
-targetCompatibility = '21'
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
