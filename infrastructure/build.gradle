@@ -23,6 +23,12 @@ dependencies {
     implementation project(':application')
 }
 
+springBoot {
+    mainClass.set('com.clean_architecture_utils.spring.Main')
+}
 test {
     useJUnitPlatform()
 }
+
+
+

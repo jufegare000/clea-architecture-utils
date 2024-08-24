@@ -3,6 +3,9 @@
 # **Introduction**
 This is a guided Java architecture sample that provides a reference for implementing a clean architecture in a Java application. You can replicate this approach in various projects without being concerned about specific frameworks, business logic, or concrete project requirements. This sample includes examples of a **REST Controller**, a Kafka Consumer and producer, AWS Lambda function implementations, and Spring Boot application environments.
 
+# Dependencies: 
+SDK: Corretto-21.0.4.7.1
+Gradle: gradle-8.5
 # **Project Structure**
 my-app/
 ```
@@ -73,4 +76,11 @@ If you are not familiar with this approach, I invite you to explore the project 
 # **How to run applications?**
 1. SpringBoot Application: 
 	1. Be aware of the application.properties is set with the port environment variable in the path: `/infrastructure/src/main/resources/application.properties` and set your preferable port, example `server.port=8080` 
-	2. Run application using the
+	2. Run application using the following commands: 
+		1. ` ./gradlew clean build`
+		2. `` java -jar infrastructure/build/libs/infrastructure.jar
+
+	3. Test the rest controller: The following path `scripts/requests/check-service.sh` contains a shell script with a CURL that can be used for test the application once it is deployed: 
+
+
+`
