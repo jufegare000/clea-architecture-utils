@@ -78,7 +78,7 @@ If you are not familiar with this approach, I invite you to explore the project 
     1. Be aware of the application.properties is set with the port environment variable in the path: `/infrastructure/src/main/resources/application.properties` and set your preferable port, example `server.port=8080`
     2. Run application using the following commands:
         1. ` ./gradlew clean build`
-        2. `` java -jar infrastructure/build/libs/infrastructure.jar
+        2. ` java -jar infrastructure/build/libs/infrastructure.jar`
 
     3. Test the rest controller: The following path `scripts/requests/check-service.sh` contains a shell script with a CURL that can be used for test the application once it is deployed:
 
