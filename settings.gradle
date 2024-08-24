@@ -1,4 +1,8 @@
 include 'application'
 include 'domain'
 include 'infrastructure'
+include 'application:application'
+findProject(':application:application')?.name = 'application'
+include 'application'
+include 'application'
 

@@ -3,7 +3,7 @@ plugins {
 }
 
 group = 'com.clean_architecture_utils'
-version = '0.1.beta'
+version = 'unspecified'
 
 repositories {
     mavenCentral()
