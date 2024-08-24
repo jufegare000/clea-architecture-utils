@@ -6,3 +6,5 @@ gradlew
 gradle/*
 .obsidian/
 infrastructure/build
+domain/build
+application/build
