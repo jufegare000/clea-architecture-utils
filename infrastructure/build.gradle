@@ -1,0 +1,11 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':application')
+}
+
+sourceCompatibility = '21'
+targetCompatibility = '21'

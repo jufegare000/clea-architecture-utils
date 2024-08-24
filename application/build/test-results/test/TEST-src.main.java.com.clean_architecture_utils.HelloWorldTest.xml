@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="src.main.java.com.clean_architecture_utils.HelloWorldTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-08-24T18:10:42" hostname="localhost.localdomain" time="0.019">
+  <properties/>
+  <testcase name="tryToStartMain()" classname="src.main.java.com.clean_architecture_utils.HelloWorldTest" time="0.019"/>
+  <system-out><![CDATA[485937598
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

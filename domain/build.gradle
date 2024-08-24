@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+}
+
+dependencies {
+    // Este módulo no debería tener dependencias externas, sólo en pruebas si es necesario
+}
+
+sourceCompatibility = '21'
+targetCompatibility = '21'
