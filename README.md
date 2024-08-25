@@ -71,7 +71,11 @@ Each layer in this application is separated into three main modules: _Infrastruc
 If you are not familiar with this approach, I invite you to explore the project and share any questions or concerns you have about my design decisions. I will do my best to provide examples and explanations to help you understand.
 # **Implemented Modules**
 1. SpringBoot Application: You can find the Spring Configuration in the root package of the underlying directory `infrastructure/src/main/java/com/clean_architecture_utils/spring`
-2. RestController: This is an basic implementation, you can found in the infrastructure directory.
+	1. RestController: This is an basic implementation, you can found in the infrastructure directory.
+# **Communication between layers**
+1. When we are dealing with clean architectures, there must to be a way to communicate layers, in this specific implementation the **RestController** must to go to a *service layer* and by the same token, the service must to go to the specific *use case*. Those three modules are placed in the tree specific layers respectively (infrastructure-> application -> domain).
+2. Quickly, we might be tempted to use the framework's details to perform the necessary dependency injections, but this could corrupt all project layers. Instead, we will use an *anticorruption layer* to deal with de respective dependency injection:
+3. In the path `java/com/clean_architecture_utils/spring/config/SpringConfiguration.java`, you will find a configuration bean that details the dependency injection setup and specifies the services used. This configuration facilitates the flow of dependencies from the controller to the use case and beyond.
 
 # **How to run applications?**
 1. SpringBoot Application:
