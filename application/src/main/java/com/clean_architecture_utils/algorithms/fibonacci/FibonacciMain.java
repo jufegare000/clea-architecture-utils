@@ -1,7 +1,7 @@
 package com.clean_architecture_utils.algorithms.fibonacci;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class FibonacciMain {
@@ -18,25 +18,19 @@ public class FibonacciMain {
 
 
     List<Integer> setUpFirstItemList(Integer maxNumber) throws Exception {
-        Integer fibonnaci0 = 0;
-        Integer fibonnaci1 = 1;
-        List<Integer> fibonacciList = new ArrayList<>();
         if (maxNumber < 0) {
             throw new Exception("Fibonnaci is not allowed for negative numbers");
-        } else if (maxNumber == 0) {
-            fibonacciList.add(fibonnaci0);
-        } else {
-            fibonacciList.add(fibonnaci0);
-            fibonacciList.add(fibonnaci1);
         }
-        return fibonacciList;
+        return IntStream.rangeClosed(0, maxNumber)
+                .boxed()
+                .filter(n -> n == 0 || n == 1)
+                .collect(Collectors.toList());
     }
 
-    List<Integer> calculateFibonacci(List<Integer> fibonacciList, int currentTerm) {
+    void calculateFibonacci(List<Integer> fibonacciList, int currentTerm) {
         Integer Fibnminus1 = fibonacciList.get(currentTerm - 1);
         Integer Fibnminus2 = fibonacciList.get(currentTerm - 2);
         fibonacciList.add(calculateFibonacciSum(Fibnminus1, Fibnminus2));
-        return fibonacciList;
     }
 
     Integer calculateFibonacciSum(Integer previous, Integer current) {
