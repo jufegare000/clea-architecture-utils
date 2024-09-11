@@ -7,9 +7,7 @@ import java.util.stream.IntStream;
 public class FibonacciMain {
 
     public List<Integer> getSumOfNthFibonacci(int maxNumber) throws Exception {
-
         List<Integer> fibonacciList = setUpFirstItemList(maxNumber);
-
         IntStream.range(2, maxNumber + 1)
                 .forEach(i -> calculateFibonacci(fibonacciList, i));
 
