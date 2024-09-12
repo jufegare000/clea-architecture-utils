@@ -14,15 +14,18 @@ public class FibonacciMain {
         return fibonacciList;
     }
 
-
     List<Integer> setUpFirstItemList(Integer maxNumber) throws Exception {
-        if (maxNumber < 0) {
-            throw new Exception("Fibonnaci is not allowed for negative numbers");
-        }
+        validatePositiveValue(maxNumber);
         return IntStream.rangeClosed(0, maxNumber)
                 .boxed()
                 .filter(n -> n == 0 || n == 1)
                 .collect(Collectors.toList());
+    }
+
+    void validatePositiveValue(Integer number) throws Exception {
+        if (number < 0) {
+            throw new Exception("Fibonnaci is not allowed for negative numbers");
+        }
     }
 
     void calculateFibonacci(List<Integer> fibonacciList, int currentTerm) {
