@@ -6,7 +6,7 @@ public class CleanBinarySearch {
         BinarySearchData binarySearchData = setUpData(vector, element);
         while (evaluateBinaryCondition(binarySearchData)) {
             int foundVectorElement = evaluateMiddleInTheStructure(binarySearchData);
-            if (isFound(foundVectorElement, element)) return binarySearchData.getElementTobeFound();
+            if (isFound(foundVectorElement, element)) return binarySearchData.getMiddle();
             updateElementsBasedOnFoundElement(binarySearchData);
         }
         return elementHasNotFound();
@@ -27,12 +27,15 @@ public class CleanBinarySearch {
 
     public void updateElementsBasedOnFoundElement(BinarySearchData binarySearchData) {
         int middle = binarySearchData.getMiddle();
-        int elementToBeFound = binarySearchData.getElementTobeFound();
-        int foundElement = getElementFromTheMiddle(binarySearchData);
-        if (elementToBeFound < foundElement) {
+        if (checkCurrentElementIsMinorThanTheActual(binarySearchData)) {
             binarySearchData.setLastElement(middle - 1);
         } else binarySearchData.setFirstElement(middle + 1);
     }
+
+    public boolean checkCurrentElementIsMinorThanTheActual(BinarySearchData binarySearchData){
+        return binarySearchData.getElementTobeFound() < getElementFromTheMiddle(binarySearchData);
+    }
+
 
     public int elementHasNotFound() {
         System.out.println("ELEMENT HAS NOT FOUND");
