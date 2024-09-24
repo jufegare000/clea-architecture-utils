@@ -20,16 +20,8 @@ public class BinarySearchData {
         return array;
     }
 
-    public void setArray(int[] array) {
-        this.array = array;
-    }
-
     public int getElementTobeFound() {
         return elementTobeFound;
-    }
-
-    public void setElementTobeFound(int elementTobeFound) {
-        this.elementTobeFound = elementTobeFound;
     }
 
     public int getFirstElementIndex() {
