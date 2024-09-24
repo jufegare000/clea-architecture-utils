@@ -5,11 +5,15 @@ public class CleanBinarySearch {
     public int findIntElement(int element, int[] vector) {
         BinarySearchData binarySearchData = setUpData(vector, element);
         while (evaluateBinaryCondition(binarySearchData)) {
-            int foundVectorElement = evaluateMiddleInTheStructure(binarySearchData);
-            if (isFound(foundVectorElement, element)) return binarySearchData.getMiddle();
+            if (isElementFoundInTheMiddle(binarySearchData)) return binarySearchData.getMiddle();
             updateElementsBasedOnFoundElement(binarySearchData);
         }
         return elementHasNotFound();
+    }
+
+    public boolean isElementFoundInTheMiddle(BinarySearchData binarySearchData){
+        int foundVectorElement = evaluateMiddleInTheStructure(binarySearchData);
+        return isFound(foundVectorElement, binarySearchData.getElementTobeFound());
     }
 
     public int getElementFromTheMiddle(BinarySearchData binarySearchData) {
@@ -48,6 +52,10 @@ public class CleanBinarySearch {
 
     public boolean isFound(int foundElement, int middle) {
         return (foundElement == middle);
+    }
+    public boolean isFoundV2(BinarySearchData binarySearchData) {
+        int foundVectorElement = evaluateMiddleInTheStructure(binarySearchData);
+        return (foundVectorElement == binarySearchData.getMiddle());
     }
 
     private int calculateArrayMiddle(int firstElement, int lastElement) {
