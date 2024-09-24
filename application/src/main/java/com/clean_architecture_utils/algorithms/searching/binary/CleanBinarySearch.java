@@ -5,7 +5,7 @@ public class CleanBinarySearch {
     public int findIntElement(int element, int[] vector) {
         BinarySearchData binarySearchData = setUpData(vector, element);
         while (evaluateBinaryCondition(binarySearchData)) {
-            if (isElementFoundInTheMiddle(binarySearchData)) return binarySearchData.getMiddle();
+            if (isElementFoundInTheMiddle(binarySearchData)) return binarySearchData.getMiddleElementIndex();
             updateElementsBasedOnFoundElement(binarySearchData);
         }
         return elementHasNotFound();
@@ -17,23 +17,23 @@ public class CleanBinarySearch {
     }
 
     public int getElementFromTheMiddle(BinarySearchData binarySearchData) {
-        return binarySearchData.getArray()[binarySearchData.getMiddle()];
+        return binarySearchData.getArray()[binarySearchData.getMiddleElementIndex()];
     }
 
     public int evaluateMiddleInTheStructure(BinarySearchData binarySearchData) {
-        binarySearchData.setMiddle(calculateArrayMiddle(binarySearchData.getFirstElement(), binarySearchData.getLastElement()));
+        binarySearchData.setMiddleElementIndex(calculateArrayMiddle(binarySearchData.getFirstElementIndex(), binarySearchData.getLastElementIndex()));
         return getElementFromTheMiddle(binarySearchData);
     }
 
     public boolean evaluateBinaryCondition(BinarySearchData binarySearchData) {
-        return binarySearchData.getFirstElement() <= binarySearchData.getLastElement();
+        return binarySearchData.getFirstElementIndex() <= binarySearchData.getLastElementIndex();
     }
 
     public void updateElementsBasedOnFoundElement(BinarySearchData binarySearchData) {
-        int middle = binarySearchData.getMiddle();
+        int middle = binarySearchData.getMiddleElementIndex();
         if (checkCurrentElementIsMinorThanTheActual(binarySearchData)) {
-            binarySearchData.setLastElement(middle - 1);
-        } else binarySearchData.setFirstElement(middle + 1);
+            binarySearchData.setLastElementIndex(middle - 1);
+        } else binarySearchData.setFirstElementIndex(middle + 1);
     }
 
     public boolean checkCurrentElementIsMinorThanTheActual(BinarySearchData binarySearchData){
@@ -55,7 +55,7 @@ public class CleanBinarySearch {
     }
     public boolean isFoundV2(BinarySearchData binarySearchData) {
         int foundVectorElement = evaluateMiddleInTheStructure(binarySearchData);
-        return (foundVectorElement == binarySearchData.getMiddle());
+        return (foundVectorElement == binarySearchData.getMiddleElementIndex());
     }
 
     private int calculateArrayMiddle(int firstElement, int lastElement) {

@@ -4,16 +4,16 @@ public class BinarySearchData {
 
     int[] array;
     int elementTobeFound;
-    int firstElement;
-    int lastElement;
-    int middle;
+    int firstElementIndex;
+    int lastElementIndex;
+    int middleElementIndex;
 
-    public BinarySearchData(int[] array, int elementTobeFound, int firstElement, int lastElement, int middle) {
+    public BinarySearchData(int[] array, int elementTobeFound, int firstElementIndex, int lastElementIndex, int middleElementIndex) {
         this.array = array;
         this.elementTobeFound = elementTobeFound;
-        this.firstElement = firstElement;
-        this.lastElement = lastElement;
-        this.middle = middle;
+        this.firstElementIndex = firstElementIndex;
+        this.lastElementIndex = lastElementIndex;
+        this.middleElementIndex = middleElementIndex;
     }
 
     public int[] getArray() {
@@ -32,28 +32,28 @@ public class BinarySearchData {
         this.elementTobeFound = elementTobeFound;
     }
 
-    public int getFirstElement() {
-        return firstElement;
+    public int getFirstElementIndex() {
+        return firstElementIndex;
     }
 
-    public void setFirstElement(int firstElement) {
-        this.firstElement = firstElement;
+    public void setFirstElementIndex(int firstElementIndex) {
+        this.firstElementIndex = firstElementIndex;
     }
 
-    public int getLastElement() {
-        return lastElement;
+    public int getLastElementIndex() {
+        return lastElementIndex;
     }
 
-    public void setLastElement(int lastElement) {
-        this.lastElement = lastElement;
+    public void setLastElementIndex(int lastElementIndex) {
+        this.lastElementIndex = lastElementIndex;
     }
 
-    public int getMiddle() {
-        return middle;
+    public int getMiddleElementIndex() {
+        return middleElementIndex;
     }
 
-    public void setMiddle(int middle) {
-        this.middle = middle;
+    public void setMiddleElementIndex(int middleElementIndex) {
+        this.middleElementIndex = middleElementIndex;
     }
 }
 
