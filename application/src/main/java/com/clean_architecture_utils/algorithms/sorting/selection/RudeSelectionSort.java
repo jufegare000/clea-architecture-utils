@@ -2,18 +2,19 @@ package com.clean_architecture_utils.algorithms.sorting.selection;
 
 public class RudeSelectionSort {
 
-
-    public void sort(int[] arr) {
+    public void sort(int[] arr){
         int lengthOfArray = arr.length;
-        for (int i = 0; i < lengthOfArray - 1; i++) {
-            int lastMinimumIndex = i;
-            for (int j = i + 1; j < lengthOfArray; j++) {
-                if (arr[j] < arr[lastMinimumIndex]) {
-                    lastMinimumIndex = j;
+        int lastSmallestIndex = 0;
+        int temporaryRegister = 0;
+        for(int i = 0; i < lengthOfArray - 1; i++){
+            lastSmallestIndex = i;
+            for(int j = i +1; j < lengthOfArray; j++){
+                if(arr[j]< arr[lastSmallestIndex]){
+                    lastSmallestIndex = j;
                 }
             }
-            int temporaryRegister = arr[lastMinimumIndex];
-            arr[lastMinimumIndex] = arr[i];
+            temporaryRegister = arr[lastSmallestIndex];
+            arr[lastSmallestIndex] = arr[i];
             arr[i] = temporaryRegister;
         }
     }
