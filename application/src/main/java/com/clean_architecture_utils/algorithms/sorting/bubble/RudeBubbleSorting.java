@@ -16,7 +16,9 @@ public class RudeBubbleSorting {
                     arr[j] = temporaryRegister;
                 }
             }
-            if (!swapped) break;
+            if (!swapped) {
+                i = lengthOfArrayForRound;
+            };
         }
     }
 
