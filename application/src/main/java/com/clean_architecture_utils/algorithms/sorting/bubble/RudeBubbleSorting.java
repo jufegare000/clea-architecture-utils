@@ -18,8 +18,7 @@ public class RudeBubbleSorting {
             }
             if (!swapped) {
                 i = lengthOfArrayForRound;
-            };
+            }
         }
     }
-
 }

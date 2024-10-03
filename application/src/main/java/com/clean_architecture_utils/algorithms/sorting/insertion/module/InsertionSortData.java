@@ -17,15 +17,6 @@ public class InsertionSortData {
         this.innerIterationIndex = 0;
     }
 
-    public int getCurrentElement() {
-        return currentElement;
-    }
-
-    public int getCurrentIterationIndex() {
-        return currentIterationIndex;
-    }
-
-
     public void decreaseInnerIndexBasedOnCurrentIndex() {
         this.innerIterationIndex = this.currentIterationIndex - 1;
     }
@@ -43,10 +34,6 @@ public class InsertionSortData {
     }
 
     public void updateCurrentElement() {
-        this.currentElement = this.array[currentIterationIndex];
-    }
-
-    public void updateCurrentParameters() {
         this.currentElement = this.array[currentIterationIndex];
     }
 
