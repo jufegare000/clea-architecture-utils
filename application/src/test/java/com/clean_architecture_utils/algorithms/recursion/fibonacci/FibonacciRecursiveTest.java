@@ -1,6 +1,5 @@
-package com.clean_architecture_utils.algorithms;
+package com.clean_architecture_utils.algorithms.recursion.fibonacci;
 
-import com.clean_architecture_utils.algorithms.fibonacci.FibonacciRecursive;
 import org.junit.jupiter.api.Test;
 
 public class FibonacciRecursiveTest {
