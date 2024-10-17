@@ -9,6 +9,14 @@ public class RudeBubbleSortingTest {
     RudeBubbleSorting rudeBubbleSorting = new RudeBubbleSorting();
 
     @Test
+    public void theArrayIsEmpty(){
+        int[] emptyArray = {};
+        rudeBubbleSorting.sort(emptyArray);
+        assert emptyArray.length == 0;
+    }
+
+
+    @Test
     public void sortAnArrayWithTwoElements() {
         int[] disorderedArray = {2, 1};
         int[] orderedArray = {1, 2};

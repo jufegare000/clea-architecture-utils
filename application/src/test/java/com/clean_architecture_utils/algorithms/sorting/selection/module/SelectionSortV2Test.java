@@ -9,6 +9,13 @@ public class SelectionSortV2Test {
     SelectionSortV2 selectionSortV2 = new SelectionSortV2();
 
     @Test
+    public void theArrayIsEmpty(){
+        int[] emptyArray = {};
+        selectionSortV2.sort(emptyArray);
+        assert emptyArray.length == 0;
+    }
+
+    @Test
     public void sortArrayWithTwoElements(){
         int[] disorderedArray = {2, 1};
         int[] orderedArray = {1, 2};

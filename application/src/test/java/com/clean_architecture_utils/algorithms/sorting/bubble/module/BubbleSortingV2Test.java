@@ -8,6 +8,14 @@ public class BubbleSortingV2Test {
 
     BubbleSortingV2 bubleSortV2 = new BubbleSortingV2();
 
+
+    @Test
+    public void theArrayIsEmpty(){
+        int[] emptyArray = {};
+        bubleSortV2.sort(emptyArray);
+        assert emptyArray.length == 0;
+    }
+
     @Test
     public void sortArrayWithTwoElements(){
         int[] disorderedArray = {2, 1};

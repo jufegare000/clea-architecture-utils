@@ -9,6 +9,14 @@ public class RudeSelectionAlgorithmTest {
     RudeSelectionSort rudeSelectionSort = new RudeSelectionSort();
 
     @Test
+    public void baseCaseArrayIsEmpty() {
+        int[] emptyArray = {};
+        rudeSelectionSort.sort(emptyArray);
+        assert emptyArray.length == 0;
+    }
+
+
+    @Test
     public void sortArrayWithTwoElements(){
         int[] disorderedArray = {2, 1};
         int[] orderedArray = {1, 2};

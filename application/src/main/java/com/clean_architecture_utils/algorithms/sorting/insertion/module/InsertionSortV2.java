@@ -2,6 +2,14 @@ package com.clean_architecture_utils.algorithms.sorting.insertion.module;
 
 public class InsertionSortV2 {
 
+    public void sort(int[] arr) {
+        InsertionSortData insertionSortData = setupSortingStructure(arr);
+        while (!isEndOfTheArray(insertionSortData)) {
+            orderDelimitedElements(insertionSortData);
+        }
+    }
+
+
     public void orderDelimitedElements(InsertionSortData insertionSortData) {
         insertionSortData.updateCurrentElement();
         insertionSortData.decreaseInnerIndexBasedOnCurrentIndex();
@@ -11,12 +19,6 @@ public class InsertionSortV2 {
         updateArrayElements(insertionSortData);
     }
 
-    public void sort(int[] arr) {
-        InsertionSortData insertionSortData = setupSortingStructure(arr);
-        while (!isEndOfTheArray(insertionSortData)) {
-            orderDelimitedElements(insertionSortData);
-        }
-    }
 
     public boolean isEndOfTheArray(InsertionSortData insertionSortData) {
         return (insertionSortData.isTheEndOfArray());
