@@ -1,4 +1,4 @@
-package com.clean_architecture_utils.algorithms.fibonacci;
+package com.clean_architecture_utils.algorithms.recursion.fibonacci;
 
 
 public class FibonacciRecursive {

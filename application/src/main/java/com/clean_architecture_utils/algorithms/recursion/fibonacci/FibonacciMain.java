@@ -1,4 +1,4 @@
-package com.clean_architecture_utils.algorithms.fibonacci;
+package com.clean_architecture_utils.algorithms.recursion.fibonacci;
 
 import java.util.List;
 import java.util.stream.Collectors;
