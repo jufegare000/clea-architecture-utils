@@ -6,7 +6,7 @@ public class RudeBinarySearch {
     public int findIntElement(int element, int[] vector) {
         int lastElement = vector.length;
         int firstElement = 0;
-        while (firstElement <= lastElement) {
+            while (firstElement <= lastElement) {
             int middle = (firstElement + lastElement) / 2;
             if (vector[middle] == element) {
                 return middle;
