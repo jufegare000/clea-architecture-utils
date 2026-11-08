@@ -1,0 +1,13 @@
+subprojects {
+	plugins.withId('java') {
+		java {
+			toolchain {
+				languageVersion = JavaLanguageVersion.of(25)
+			}
+		}
+
+		dependencies {
+			testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+		}
+	}
+}
